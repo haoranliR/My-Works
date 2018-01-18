@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background-color: lightblue;
+}
+h2 {
+    text-shadow: 2px 2px yellow;
+} 
+
+.cc {
+    padding: 10px;
+    border: 2px solid white;
+    background:url(C:\Users\Hraoran\Pictures\PIC from IPhone Ipod\20160301\IMG_0090.JPG);
+}
+
+</style>
+</head>
+<body>
+<h2>Number calculator</h2>
+<div class="cc">
+  <form id="frm1" action=>
+    Number1: <input type="text" name="fname" value=12><br><br>
+    Number2: <input type="text" name="lname" value=15><br><br>
+    
+    method: <select name="cars">
+      <option value=0>add</option>
+      <option value=1>sub</option>
+      <option value=2>mul</option>
+      <option value=3>div</option>
+    </select>
+    <br><br>  
+  </form> 
+  <img src="C:\Users\Hraoran\Pictures\PIC from IPhone Ipod\20160301\IMG_0090.JPG" alt="Fjords" width="200" height="200">
+<div>
+
+
+
+<p>Click "Check" to get your result.</p>
+
+<button onclick="myFunction()">Calculate</button>
+
+<p id="demoTest"></p>
+<p id="demo"></p>
+<p> The result is: </p>
+<h2 id="demor"></h2>
+
+<script>
+function myFunction() {
+    var x = document.forms["frm1"];
+    var text = "";
+    var i;
+    var numb1 = parseFloat(x.elements[0].value);
+    var numb2 = parseFloat(x.elements[1].value);
+    var method = x.elements[2].value;
+    var result;
+    
+    if (isNaN(numb1)||isNaN(numb2)){
+      alert("Illegle input! Please input a number again.");
+    }
+    else{
+    
+      switch(method){
+        case "0":
+          result = numb1 + numb2;
+          break;
+        case "1":
+          result = numb1 - numb2;
+          break;
+        case "2":
+          result = numb1 * numb2;
+          break;
+        case "3":
+          result = numb1 / numb2;
+          break;
+      }
+
+      //document.getElementById("demoTest").innerHTML = numb1;
+      //document.getElementById("demo").innerHTML = numb1+", "+numb2+", "+method;
+      document.getElementById("demor").innerHTML = result;
+    }
+}
+</script>
+
+</body>
+</html>
