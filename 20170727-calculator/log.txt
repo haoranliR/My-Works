@@ -7,4 +7,4 @@ Add simple css to decorate it.
 2017/07/27 - 
 Try to upload on github.
 2018/01/17 - 
-It seems good! i have put it on.
+I have put it on, and edit it.
