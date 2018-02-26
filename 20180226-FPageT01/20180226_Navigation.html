@@ -7,12 +7,58 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  .bg-1{ 
+       background-color: #000f00; /* Green */
+        color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: #174e5d; /* Dark Blue */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  </style>
 </head>
 <body>
+	<div class="container-fluid bg-1 text-center">
+		<h3>Navigation Case</h3>
+		<img src="C:\Users\Hraoran\Documents\GitHub\My-Works\20180226-FPageT01\eye01.jpg" alt="Bird">
+		<h3>Show you how do we build a page navigation</h3>
+	</div>
+	<div class="container-fluid bg-2 text-center">
+  		<a href="#wai" data-toggle="collapse"><h3>What Am I?</h3></a>
+  		 <div id="wai" class="collapse">
+  		 	<div class="row">
+    			<div class="col-sm-6 col-md-6 col-lg-6">
+    				<h3>crayon</h3>
+    				<img src="C:\Users\Hraoran\Documents\GitHub\My-Works\20180226-FPageT01\crayon.jpg" alt="crayon" width="300" height="240">
+    			</div>
+    			<div class="col-sm-6 col-md-6 col-lg-6">
+    				<h3>pinter</h3>
+    			</div>
+   			</div>
+  			<div class="row">
+    			<div class="col-sm-6 col-md-6 col-lg-6">
+    				<h3>water color</h3>
+    			</div>
+    			<div class="col-sm-6 col-md-6 col-lg-6">
+    				<h3>pencil sketch</h3>
+    			</div>
+   			</div>
+  		</div>
+	</div>
 
-<h3>Navigation Case</h3>
-<img src="C:\Users\Hraoran\Documents\GitHub\My-Works\20180226-FPageT01\bird150.jpg" alt="Bird">
-<h3>Show you how do we build a page navigation</h3>
+	<div class="container-fluid bg-3 text-center">
+		<a href="#wtfm" data-toggle="collapse"><h3>Where To Find Me?</h3></a>
+  		<div id="wtfm" class="collapse text-left">
+  			<p>Haoran Li</p>
+  			<p>592 Pinecone Strand</p>
+  			<p>Acton, MA 01720</p>
+  		</div>
+	</div>
 
 </body>
 </html>
