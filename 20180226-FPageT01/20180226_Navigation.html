@@ -4,90 +4,19 @@
   <title>Bootstrap Navigation</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="20180226_Navigation.css">
   <style>
-  .bg-1{ 
-      background-color: #000f00; /* Green */
-      color: #ffffff;
-      padding-top: 100px;
-      padding-bottom: 100px;
-  }
-  .bg-2 { 
-      background-color: #464e5d; /* Dark Blue */
-      color: #ffffff;
-  }
-  .bg-3 { 
-      background-color: #ffffff; /* White */
-      color: #444444;
-  }
-    .bg-4 { 
-      background-color: #2f2f2f;
-    color: #ffffff;
-  }
-  .pad20 {
-    padding: 20px;
-  }
-  .pad10 {
-    padding: 10px;
-  }
-  .pad40 {
-    padding: 40px;
-  }
-  .cv{
-    right;
-  }
-  #wtfm {
-    background-image: url("bG.jpg");
-    background-position: right bottom;
-    background-repeat: no-repeat;
-    height: 230px;
-    padding-left: 100px;
-  }
-  .container-fluid{
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    margin-top: 0px;
-    background-color: #464e5d;
-    width: 360px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 2;
-    height: 300px;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 10px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-.dropdown-content a:hover {background-color: #000f00}
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-.pading-wide{
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-  .icon-p{
-    position: center;
-  }
-
 
   </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" aria-expanded="false" aria-controls="navbarColor02" aria-label="Toggle navigation" type="button" data-target="#navbarColor02" data-toggle="collapse">
     <span class="navbar-toggler-icon"></span>
@@ -171,14 +100,48 @@
 
 	<div class="container-fluid bg-3 text-center">
 		<a href="#wtfm" data-toggle="collapse"><h3>Where To Find Me?</h3></a>
-  		<div id="wtfm" class="collapse text-left">
-  			<h5>Haoran Li</h5>
-  			<h5>592 Pinecone Strand</h5>
-  			<h5>Acton, MA 01720</h5>
-        <br><br>
+  		<!--
+      <div class="collapse text-left">
         <canvas class="cv" id="myCanvas2" width="900" height="20" style="border:1px solid #004006;"></canvas>
   		</div>
-	</div>
+    -->
+	
+
+
+  <div id="wtfm" class="collapse">
+    <h3 class="text-center">Contact</h3>
+    <p class="text-center"><em>We love our fans!</em></p>
+    <div class="row test">
+      <div class="col-md-4 text-left">
+        <h5>Address</h5>
+        <br>
+        <p><span class="glyphicon glyphicon-envelope"></span>592 Pinecone Strand</p>
+        <p><span class="glyphicon glyphicon-envelope"></span>Acton, MA 01720p</p> 
+        <p><i class="fa fa-call"></i>Phone: +01 1-978-333-8666</p>
+        <p><i class="fa fa-email"></i>Email: mail@mail.com</p>
+
+
+      </div>
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+          </div>
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+          </div>
+        </div>
+        <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+        <br>
+        <div class="row">
+          <div class="col-md-12 form-group text-left">
+            <button class="btn btn-outline-secondary pading-wide" type="submit">Send</button>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div> 
+  </div>
 
   <footer class="container-fluid bg-4 text-center">
     <p>visit website for more information. <a href="https://www.w3schools.com">www.w3schools.com</a></p> 
